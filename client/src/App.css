@@ -1,0 +1,1805 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+input:focus-within{
+  border:none;
+  outline: none
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+#root{
+  
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width:768px){
+ .home{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+ }
+  .topNav{
+    display: flex;
+    background-color: royalblue;
+    justify-content: center;
+    align-items: center;    
+    z-index: 3;
+    width: 100%;
+    order: 1;
+    flex:0.5;
+  }
+  .subNav{
+    display: flex;
+    background-color: royalblue;
+    justify-content: center;
+    align-items: center;    
+    flex:30%;
+  }
+  .topNav button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color:black;
+  }
+  .topNav button:active{
+    color:white;
+  }
+  .topNav button:focus{
+    outline: none;
+  }
+
+  .logo h3{
+    margin: 5px 0 5px 0;
+  }
+  .logo{
+    display: flex;
+    justify-self: flex-end;
+    flex:3;
+    justify-content: center;
+    align-items: center;
+  }
+  .appLogo{
+    height: 2rem;
+  }
+  .camera{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .searchNav{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+  }
+  .recentTransactions{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+  }
+  .userProfile{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+  }
+  .userProfile button{
+    align-self: center;
+  }
+  .userProfile button:focus{
+    outline: none;
+  }
+  .userSideNav{
+    display: flex;
+    flex-direction: column;
+    background-color:gainsboro;
+    position: fixed;
+    transition:0.2s;
+    height: 100%;
+    z-index: 5;
+    overflow-x: hidden;
+  }
+  .activity i{
+    height:50px;
+    width:50px;
+    color: 'white';
+    background-color: royalblue;
+    border-radius: 50%;
+    border: inset black 5px;
+    padding: 10px;
+    /* min-width: 30px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  .activity img{
+    max-height:60px;
+    max-width:60px;
+  }
+  .btmNav{
+    display: flex;
+    background-color: royalblue;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    order: 3;
+    flex:0.5;
+    max-height: 67px;
+  }
+  .btmNav button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+  }
+  .btmNav button:active{
+    color: white;
+  }
+  .btmNav button:focus{
+    outline: none;
+  }
+  .icon{
+    display: flex;
+    height: 50px;
+    flex:3;
+    justify-content: center;
+    align-items: center;
+  }
+  .sendGet{
+    display: flex;
+    display: flex;
+    height: 50px;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+  }
+  .myAccount{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+ 
+  .invest{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+ 
+  .keys{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .key{
+    border: none;
+    background-color: white;
+    color:royalblue;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width:33.3%;
+  }
+  .key:active{
+    background-color: royalblue;
+    color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .key:focus{
+    outline:none;
+  }
+  .keypad{
+    display: flex;
+    width: 99%;
+    flex:5.5;
+  }
+  .profilePic i{
+    font-size:50px;
+  }
+  .profile :nth-child(even){
+    background-color: gainsboro;
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0 1rem 0;
+    text-align: center;
+    order: 2;
+    flex:5 !important;
+    overflow-y: auto;
+  }
+  .display{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex:2.5;
+  }
+  #currency{
+    width: 23%;
+    border-radius: 10px;
+    background-color:white;
+    color: royalblue;
+    border: solid 2px royalblue
+  }
+  select{
+    font-size: 20px;
+    text-align: center;
+  }
+  .reqSend{
+    display: flex;
+    width: 99%;
+    padding: 15px 0 0 0;
+    flex:0.5;
+  }
+  .request{
+    background-color:white;
+    color: royalblue;
+    font-size: 20px;
+    border:solid 3px royalblue;
+    border-radius: 10px 0 0 10px ;
+    flex:1;
+    margin: 0 2.5px 0 2.5px;
+    font-weight: 500;
+    padding: 8px;
+    transition: 0.5s;
+    height: 100%;
+  }
+  .request:active{
+    background-color: royalblue;
+    color: white;
+  }
+  .request:focus{
+    outline: none;
+  }
+  .send {
+    background-color: white;
+    color: royalblue;
+    
+    font-size: 20px;
+    border:solid 3px royalblue;
+    border-radius: 0 10px 10px 0;
+    flex:1;
+    margin: 0 2.5px 0 2.5px;
+    padding: 8px;
+    font-weight: 00;
+    transition: 0.5s;
+  }
+  .send:active{
+    background-color: royalblue;
+    color: white;
+  }
+  .send:focus{
+    outline:none;
+  }
+.loginSignUp{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.next{
+  background-color: royalblue;
+  border-radius: 15px;
+  width:90%;
+  color: white;
+  padding: 8px;
+  font-size: 20px;
+  margin:10px 0 10px 0;
+  border:none;
+}
+.next:active{
+  background-color: white;
+  color: royalblue;
+}
+.headersblock{
+  transition:0.5s;
+}
+.headersblock h3{
+  font-family: sans-serif;
+  font-size: 5.5vw;
+  padding: 10px;
+  text-align: center;
+}
+.headersblock p{
+  text-align: center;
+}
+.phone{
+  border-radius: 15px;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  caret-color: royalblue;
+  border: none;
+}
+.phone:focus-visible{
+  outline: none;
+}
+.phone:placeholder-shown{
+  font-size: 20px;
+}
+.verify{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.confirm{
+  border-radius: 15px;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  caret-color: royalblue;
+  border:transparent;
+}
+.confirm:focus-visible{
+  outline:none;
+  /* color:royalblue */
+}
+.addCard {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  
+}
+.addCard input{
+  padding: 10px;
+  border-radius: 15px;
+  caret-color: royalblue;
+  margin: 0 0 5px 0;
+}
+.addCard input:placeholder-shown{
+  font-size: 20px;
+}
+.addCard input:focus-visible{
+  outline:none;
+}
+.opt{
+  display: flex;
+}
+.selectUserName{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectUserName input:focus-visible{
+outline: none;
+}
+.selectUserName input:placeholder-shown{
+  font-size: 18px;
+}
+.shipCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: left; */
+
+}
+.shipCard input{
+  padding: 10px;
+  border-radius: 15px;
+  caret-color: royalblue;
+  margin: 0;
+  width: 85%;
+  border: none;
+}
+.shipCard input:placeholder-shown{
+  font-size: 18px;
+}
+.shipCard input:focus-visible{
+  outline: none;
+}
+.shipCard label{
+  align-self: flex-start;
+  padding: 0 0 0 20px;
+}
+.addPassword {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+.addPassword input{
+  padding: 20px;
+  border-radius: 15px;
+  caret-color: royalblue;
+  margin: 0 0 5px 0;
+  width: 85%;
+  border: none;
+}
+.addPassword input:placeholder-shown{
+  font-size: 18px;
+}
+.addPassword input:focus-visible{
+  outline: none;
+}
+.signIn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signIn input{
+  padding: 20px;
+  border-radius: 15px;
+  caret-color: royalblue;
+  margin: 0 0 5px 0;
+  width: 85%;
+  border: none;
+}
+.signIn input:placeholder-shown{
+  font-size: 18px;
+}
+.signIn input:focus-visible{
+  outline: none;
+}
+.signIn label{
+  align-self: flex-start;
+  padding: 10px 0 0 25px;
+  font-weight: 600;
+}
+.userProfile{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.userName{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 0.5rem 0; 
+  width: 100%;
+  flex:0.4;
+  color: black;
+  border-bottom: inset 0.5px royalblue;
+  background-color: gainsboro;
+}
+.userName i{
+  height:40px;
+width:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 40px;
+}
+.userName img{
+  height:40px;
+  width:40px;
+}
+.invitebtn{
+  background-color: white;
+  border: solid 3px royalblue;
+  color: royalblue;
+  border-radius:0 15px 15px 15px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  margin : 1rem 0 0 0;
+  transition: 0.5s;
+}
+.invitebtn:active{
+  background-color: royalblue;
+  border: solid 3px royalblue;
+  color: white;
+}
+.settings{
+  display: grid;
+   width: 100%;
+ flex:1.15;
+ grid-template-columns: auto ;
+ grid-template-rows: auto;
+ row-gap:0;
+ align-content: space-around;
+}
+.settings p{
+  margin :auto;
+  color:royalblue;
+  font-size:16px;
+}
+.settings div{
+  min-height: 105px;
+  font-size: 20px;
+  border-bottom: solid 1px royalblue;
+  height: 100%;
+}
+.contacts{
+    display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+  text-align: center;
+}
+.personal{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+  text-align: center;
+  cursor: pointer;
+}
+.linked{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+  text-align: center;
+}
+.limits{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+  text-align: center;
+}
+.support{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+  text-align: center;
+}
+.privacy{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+  text-align: center;
+}
+.notifications{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+  text-align: center;
+}
+.logout{
+  display: flex;
+  flex:0.15;
+  width:100%;
+}
+.logout button{
+  width: 100%;
+  background-color: royalblue;
+  color:white;
+  font-size: 20px;
+  border:none;
+  transition: 0.5s;
+  
+
+}
+.logout button:active{
+  background-color: white;
+  color:royalblue;
+}
+
+.search{
+  display: flex;
+  flex-direction: column;
+  width: 99%;
+  justify-content: center;
+  align-items: center;
+}
+#search{
+  position: absolute;
+  transition: ease-in 0.3s;
+  width:0;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  left:10px;
+  color:royalblue
+}
+
+.find{
+  display: flex;
+  flex-direction: column;
+  flex:1.9;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin:5px 0 0 0;
+
+}
+#findContact{
+ text-align: center;
+}
+#findUser{
+  text-align: center
+}
+
+.inputContainers input{
+  padding: 10px 0 10px 0;
+  border: none;
+  caret-color: royalblue;
+  border-radius: 2px;
+  width:244px;
+  font-size: 18px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  outline: none;
+  /* background-color:black; */
+}
+.inputContainers input:focus{
+  background-color:white;
+  color:black;
+  /* width:80%; */
+}
+.inputContainers input:placeholder-shown{
+  font-size: 18px;
+  color:black;
+  
+}
+.inputContainers input:focus-visible{
+  outline: none;
+}
+.findContact{
+}
+.signInContainers{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.signInContainers input{
+  padding: 10px 0 10px 0;
+  border: none;
+  caret-color: royalblue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2px;
+  width:100%;
+  font-size: 18px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.inputContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactResult{
+  display: flex;
+  border:solid black 1px;
+  border-radius: 10px;
+  box-shadow:3px 2px 3px black;
+  padding:5px;
+  /* max-width: 100px; */
+  background-color: gainsboro;
+}
+.contactResult img{
+  height:50px;
+  width:50px;
+}
+.contactResult1{
+  max-height:95px;
+  box-shadow: 3px 2px 3px  black ;
+  background-color: gainsboro;
+  padding: 5px 0 5px 0;
+}
+.contactResult1 img{
+  min-height: 60px;
+  min-width:60px;
+  max-width: 60px;
+  max-height: 60px;
+}
+.contactResult1 i{
+  max-width: 50px;
+  max-height: 50px;
+  min-height: 60px;
+  min-width:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchResult{
+  display: flex;
+  width: 100%;
+  transition:ease-in-out 0.15s ;
+  /* height:0 */
+}
+.admin{
+  height:100%;
+  /* margin:3.5rem 0 0 0; */
+}
+.admin p{
+margin:0 0 5px 0
+}
+
+.searchUserIcon{
+  display: flex;
+  flex:0.25;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.searchUserIcon i{
+height: 3rem;
+width:3rem;
+}
+.searchUserInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex:0.55;
+  font-size:5.5vw;
+  /* padding: 0 10px 0 10px; */
+  color: royalblue;
+}
+.searchAddView {
+  display: flex;
+  flex:0.35;
+  justify-content: flex-end;
+  align-items: center;
+  /* display: inline-block; */
+  margin: auto;
+  
+}
+.searchAddView button{
+  text-align: center;
+  cursor: pointer;
+  /* float: left; */
+  background-color:white;
+  color:royalblue;
+  /* padding:10px; */
+  border:none;
+  font-size: 16px;
+  transition:0.4s;
+  white-space: nowrap;
+}
+.searchAddView button:active{
+background-color: white;
+color:royalblue
+}
+.searchViewProfile {
+  flex:0.35;
+  display: flex;
+  justify-content: flex-end;
+}
+.searchViewProfile button{
+  cursor: pointer;
+  background-color:white;
+  color:royalblue;
+  border:none;
+  font-size: 16px;
+  transition:0.4s;
+  white-space: nowrap;
+}
+.searchViewProfile button:active{
+background-color: royalblue;
+color:white
+}
+.contactsUserInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex:0.40;
+  font-size:20px;
+  padding:0 10px 0 10px
+}
+.contactsUserIcon{
+  display: flex;
+  flex:0.20;
+  justify-content: center;
+  align-items: center;
+}
+.contactsUserIcon img{
+  height:50px ;
+  width:50px;
+}
+.add{
+  background-color: royalblue;
+  color: white;
+  border-radius: 10px;
+  border: solid 0.5px royalblue;
+  font-size: 30px;
+  height: 100%;
+  padding: 5px;
+  transition:0.7s;
+  padding: 8px;
+}
+.add:active{
+  background-color: white;
+  color: royalblue;
+  border:solid 0.5px royalblue;
+}
+.add:focus{
+  outline: none;
+  /* border: none; */
+}
+.view{
+  background-color: white;
+  color: royalblue;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  padding: 3px;
+  font-weight: 600;
+  transition:0.7s;
+  border: .5px solid royalblue;
+
+}
+.view:active{
+  background-color: royalblue;
+  color: white;
+  outline:none;
+  /* border:solid 0.5px royalblue; */
+}
+.view:focus{
+  outline: none;
+  /* border: none; */
+}
+.btncontainer1{
+  padding: 5px;
+  display: flex;
+}
+.btncontainer2{
+  display: flex;
+  padding: 5px;
+}
+.viewcontainer{
+  padding: 5px;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+}
+.addcontainer{
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modalreq{
+  /* border-right: solid 1px royalblue; */
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2px 0 2px;
+}
+
+.modalsend{
+  /* border-left: solid 1px royalblue; */
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2px 0 2px;
+}
+.addContact{
+  display: flex;
+  width: 100%;
+  /* border-top:solid 1px royalblue; */
+  margin: auto;
+  padding: 3.5px 0 0 0;
+}
+.addContact button{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: royalblue;
+  transition: 0.5s;
+}
+.contactReq{
+  display: flex;
+  width: 100%;
+  /* border-top:solid 1px royalblue; */
+  padding: 1.8px 0 0 0;
+}
+.addContact button:focus{
+  border: none;
+  outline: none;
+}
+.confirmAdd{
+  display: flex;
+  width: 75%;
+  height:175px;
+  position: absolute;
+  background-color: rgba(255, 255, 255 );
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: royalblue;
+  border: solid 1.5px royalblue;
+  font-size: 5vw;
+  top: 12rem;
+  box-shadow: 5px 10px 18px royalblue;
+  animation: slidein 0.3s;
+  -webkit-animation: slidein 0.3s;
+  z-index: 4;
+}
+@-webkit-keyframes slidein {
+  from {top: 0; opacity: 0;}
+  to {top:12rem; opacity: 1;}
+}
+
+@keyframes slidein {
+  from {top: 0; opacity: 0;}
+  to {top: 12rem; opacity: 1;}
+}
+.confirmAddTwo{
+  display: flex;
+  width: 75%;
+  height:18%;
+  position: absolute;
+  background-color: rgba(255, 255, 255 );
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: royalblue;
+  border: solid 1.5px royalblue;
+  font-size: 5vw;
+  top: 10rem;
+  box-shadow: 5px 10px 18px royalblue;
+  animation: slidein 0.3s;
+  -webkit-animation: slidein 0.3s;
+  z-index: 4;
+}
+.confirmDelete{
+  display: flex;
+  width: 95%;
+  height: 18%;
+  position: fixed;
+  background-color: rgba(255, 255, 255 );
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: royalblue;
+  border: solid 0.5px royalblue;
+  font-size: 22px;
+  top: 10rem;
+}
+.confirmAdd p{
+  flex: 0.6;
+  font-weight: 600
+}
+.confirmButtons{
+  display: flex;
+  flex:0.4;
+  border-top: solid 0.5px royalblue;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0 0 0 ;
+}
+.confirmButtons button{
+  background-color: white;
+  color: royalblue;
+  border-radius: 15px;
+  width: 100%;
+  transition: 0.5s;
+  border: none;
+  margin: 1px;
+  height: 100%;
+  padding: 0;
+  font-size: 20px;
+}
+.confirmButtons button:focus{
+  border: none;
+  outline: none;
+}
+.searchReq{
+  background-color: royalblue;
+  color: white;
+  border-radius: 10px;
+  border: solid 0.5px royalblue;
+  padding: 5px;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.searchReq:active{
+  background-color: white;
+  color: royalblue;
+}
+.searchReq:focus{
+  border:none;
+  outline: none;
+}
+.searchSend{
+  font-size: 20px;
+  background-color: white;
+  color: royalblue;
+  border-radius: 10px;
+  border: solid 0.5px royalblue;
+  padding: 5px;
+  transition: 0.5s;
+}
+.searchSend:active{
+  background-color: royalblue;
+  color: white;
+}
+.searchSend:focus{
+  border:none;
+  outline: none;
+}
+.contactReq{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.contactReq button{
+  background-color: white;
+  color: royalblue;
+  font-size:20px;
+  width: 99%;
+  transition: 0.5s;
+  border:none;
+}
+.contactReq button:focus{
+  outline: none;
+}
+.friends{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  overflow: hidden;
+  gap:0.5rem;
+  padding:0 10px;
+
+}
+.options{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: auto;
+}
+.editProfile{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+.editProfile p {
+  background-color: royalblue;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.editProfile input{
+  width:100%;
+  border: none;
+  padding: 10px;
+  border-radius: 15px 0 0 15px;
+}
+.editProfile input:placeholder-shown{
+  font-size: 18px
+}
+.editProfile input:focus{
+  background-color: black;
+  color: white;
+  caret-color: royalblue;
+}
+.editProfile input:focus-visible{
+  outline: none;
+}
+.bioInput{
+  display: flex;
+  width: 100%
+}
+.editProfile input{
+flex:0.8
+}
+.editProfile button{
+  flex:0.2;
+  background-color: white;
+  color: royalblue;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  transition: 0.5s;
+}
+.editProfile button:active{
+  color:white;
+  background-color: royalblue;
+  outline: none
+}
+.editProfile button:focus{
+  outline: none
+}
+.editProfile h5{
+  padding: 0.5rem 0 0.5rem 0;
+}
+.heading{
+  padding: 1rem 0 1rem 1rem;
+  background-color: white;
+  color:royalblue;
+}
+.phoneInput{
+  display: flex;
+  width: 100%
+}
+.emailInput{
+  display: flex;
+  width: 100%
+}
+.addressInput{
+  display: flex;
+  width: 100%
+}
+.phoneHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phoneHeader h5{
+  flex:0.8
+}
+.phoneHeader p{
+  flex:0.2;
+  margin: 0;
+}
+.emailHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.emailHeader h5{
+  flex:0.8;
+}
+.emailHeader p{
+  flex:0.2;
+  margin: 0;
+}
+.bioHeader{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.bioHeader h5{
+ flex:0.8;
+}
+.bioHeader p{
+flex:0.2;
+margin: 0;
+}
+.nameHeader{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.nameHeader h5{
+  flex:0.8;
+  padding: 0 0 0 1rem;
+}
+.nameHeader p{
+  flex:0.2;
+  margin: 0;
+  justify-self: flex-end;
+}
+.currencyInfo{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+    .currencyInfo h5{
+      flex:0.8;
+      padding: 0 0 0 1rem;
+    }
+    .currencyInfo select{
+      flex:0.2;
+      margin: 0;
+      justify-self: flex-end;
+    }
+    .bankInfo{
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .bankInfo h5{
+      flex:0.8;
+      padding: 0 0 0 1rem;
+    }
+    .bankInfo p{
+      flex:0.2;
+      margin: 0;
+      justify-self: flex-end;
+    }
+  .recent{
+    display: flex;
+  flex-direction: column;
+}
+.contact{
+  width: 100%;
+  /* padding: 1rem 0 0 0; */
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  /* align-items: center; */
+}
+.contactProfile{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 0.5rem 0 0 0;
+}
+.contactProfileInfo{
+  display: flex;
+  flex-direction: column;
+}          
+.features button{
+  padding: 10px;
+  color: royalblue;
+  background-color: white;
+  font-size: 20px;
+  border: none;
+  transition: 0.4s;
+  /* width:20vw; */
+}
+.features button:active{
+  color: white;
+  background-color: royalblue;
+}
+.features button:focus{
+  outline: none
+}
+.backToContacts{
+  position: absolute;
+  left:10px;
+  transform: translateY(-20px);
+  transform: translateX(0px);
+  border: none;
+  color: royalblue;
+  background-color: white;
+  font-size: 20px;
+  margin:10px 0 0 0 ;
+  
+}
+#snackbar{
+  position: fixed;
+  bottom: 60px;
+  /* left:50%; */
+  text-align: center;
+  background-color:royalblue;
+  color: white;
+  padding: 16px;
+  border-radius: 15px;
+  visibility: hidden;
+}
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 60px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 60px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 60px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 60px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(2,100px);
+  grid-gap: 5px;
+}
+.item{
+  border: solid 1px black;
+  justify-content: center;
+  align-items: center;
+  transition: width 2s;
+  transition-timing-function: ease;
+  width:0;
+}
+.adds h2{
+  font-size:20px;
+  font-weight: 400;
+  margin:5px 0 5px 0;
+  border: solid 0.5px royalblue;
+
+}
+.adds{
+  
+}
+.friendrequest{
+  display: flex;
+}
+.underline{
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  width:0px;
+  border-bottom: solid 3px royalblue;
+  max-width: inherit;
+  -webkit-transition: width 02s linear , opacity 0.3s ease-in-out;
+  transition: width 0.2s linear,  opacity 0.3s ease-in-out ;
+  bottom:0;
+}
+.inputContainers{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.options h2{
+  font-weight: 400;
+}
+.alerts p{
+  margin : 0;
+  padding: 0 0 0 10px;
+}
+
+.alert{
+  justify-content: center;
+  align-items: center;
+}
+.alert img{
+  height:50px;
+  max-width:50px;
+  margin:0;
+}
+.alert i{
+  height:30px;
+  width:30px;
+  color: white;
+  background-color: royalblue;
+  border-radius: 50%;
+  border: inset black 5px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  }
+.pushAlerts{
+  padding: 10px;
+  color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phoneAlerts {
+  padding: 10px;
+  align-items: center;
+  font-weight: 600;
+  color: royalblue;
+}
+.emailAlerts {
+  padding: 10px;
+  align-items: center;
+  font-weight: 600;
+  color: royalblue;
+}
+.paymeAlerts{
+  display: flex;
+  padding: 10px;
+  margin: 2rem 0 0 0;
+  font-family:fantasy;
+  align-items: center;
+  word-spacing: -3px;
+  color: royalblue;
+}
+.bitcoinAlerts{
+  font-weight: 600;
+  padding: 10px;
+  color: royalblue;
+  display: flex;
+  align-items: center;
+}
+.stockAlerts{
+  font-weight: 600;
+  padding: 10px;
+  color: royalblue;
+  display: flex;
+  align-items: center;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: royalblue;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px royalblue;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.editBtn{
+  background-color: royalblue;
+  color:white;
+  transition-duration: 0.4s;
+}
+.editBtn:active{
+  background-color: white;
+  color:royalblue;
+  
+}
+.slider.round:before {
+  border-radius: 50%
+}
+.securitydesc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.paytagdesc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0 0 0;
+}
+.moneyreqdesc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0 0 0;
+}
+.description{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  flex:1
+}
+.description h4{
+  margin:2px 0 2px 0;
+  padding: 0 0 0 6px;
+  font-size:20px;
+  font-style: italic;
+}
+.description p {
+  margin:2px 0 2px 0;
+  text-align: left;
+  font-size: 18px;
+  padding: 0 0 0 6px;
+}
+.description label{
+  flex:0.5;
+}
+.privacyComp{
+  display: flex;
+  flex-direction: column;
+}
+.addPin input:focus{
+  outline: none;
+}
+.addPin input{
+  text-align: center;
+  
+}
+.supportHome{
+  display: flex;
+  flex-direction: column;
+}
+.categories{
+  background-color: gainsboro;
+  border:solid 1px gainsboro;
+  border-radius: 15px;
+}
+.help{
+  border:none;
+  border-radius: 15px;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  padding: 15px 15px 15px 40px;
+  font-size:18px;
+  width:90%;
+  caret-color: royalblue;
+}
+.help :placeholder-shown{
+  font-size: 18px;
+}
+.help:focus{
+  outline: none;
+}
+.chat{
+  background-color: gainsboro;
+  border:solid 1px gainsboro;
+  border-radius: 15px;
+  display: flex;
+  padding: 15px;
+}
+.wallet{
+  width: 100%;
+  /* padding: 0 10px 0 10px; */
+}
+.addCash{
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.addCash button{
+  background-color: transparent;
+  color: royalblue;
+  border: double 3.5px royalblue;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid royalblue;
+  border-bottom: 6px solid royalblue;
+  border-left: 6px solid royalblue;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top:10rem;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.recentContainer{
+  /* display: flex; */
+  flex:0.55;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  margin: auto;
+}
+
+}
+.recentContainer button{
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  background-color: royalblue;
+  color: white;
+  padding:10px;
+  border:none;
+  font-size: 18px;
+  transition:0.4s
+}
+.recentContainer button:active{
+  background-color: white;
+  color:royalblue
+}
+.header{
+position: sticky;
+top:0;
+position: -webkit-sticky;
+padding: 5px;
+background-color: white;
+border-bottom: solid 0.5px royalblue; 
+}
+.addFunds{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contactList{
+  display: grid;
+  grid-template-columns: auto auto auto;  
+  gap:3.5px
+}
+
+.confirmAction{
+  top:15rem;
+  animation: fadein1 0.5s;
+  -webkit-animation: fadein1 0.5s;
+  position: absolute;
+}
+@-webkit-keyframes fadein1 {
+  from {top: 0; opacity: 0;}
+  to {top:15rem; opacity: 1;}
+}
+
+@keyframes fadein1 {
+  from {top: 0; opacity: 0;}
+  to {top: 15rem; opacity: 1;}
+}
+
+@media screen and (min-width:700px){
+  .searchAddView button{
+    font-size: 30px
+  }
+  .contactsUserInfo h5{
+    font-size: 30px
+  }
+  .contactsUserIcon img{
+    width:75px;
+    height: 75px;
+  }
+  .alert img{
+  height:80px;
+  max-width:80px;
+  margin:0;
+}
+.alert i{
+  min-height:50px;
+  height:60px;
+  width:60px;
+  text-align: center;
+  font-size: 65px;
+  }
+.alert p i{
+  height:10%
+}
+  .alert{
+    justify-content: center;
+    align-items: center;
+  }
+  .userName i{
+    height:100px;
+  width:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  }
+  .userName img{
+    height:100px;
+    width:100px;
+  }
+  .activity i{
+    height:70px;
+    width:70px;
+    color: 'white';
+    background-color: royalblue;
+    border-radius: 50%;
+    border: inset black 5px;
+    padding: 10px;
+    /* min-width: 30px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  .activity img{
+    max-height:90px;
+    max-width:90px;
+  }
+  .backToContacts{
+    font-size: 40px;
+  }
+  .profilePic i{
+    font-size:40px;
+  }
+}
